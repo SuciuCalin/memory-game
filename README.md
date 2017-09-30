@@ -17,3 +17,7 @@ Or [See it live](https://suciucalin.github.io/memory-game/).
 Use the left mouse button to click on the cards.
 
 You can start a new game anytime, by pressing the restart button or "n" on your keyboard.
+
+## Screenshots
+
+![matching-game](https://user-images.githubusercontent.com/27139870/31046372-f7b0071c-a5ff-11e7-9843-aac740efe035.png)
