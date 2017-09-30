@@ -1,0 +1,12 @@
+// TODO: Add functionality:
+    - Store game state using local storage
+https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+https://www.smashingmagazine.com/2010/10/local-storage-and-how-to-use-it/
+https://html.spec.whatwg.org/multipage/webstorage.html
+https://www.w3schools.com/html/html5_webstorage.asp
+    - Player name
+    - No of games played/won
+    - Highscores/Leaderboard(Top 10)
+    - Unlockables:
+        - Card skins/icons
+        - Player custom deck size
