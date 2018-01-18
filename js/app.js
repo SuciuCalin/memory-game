@@ -91,7 +91,7 @@ function setupGame() {
  *  Runs when a card is clicked
  */
 function showCard() {
-    // Display the card's symbol
+    // Display the card's symbol adding the css classes "open" and "show"
     $(this).addClass("open show");
 
     checkMatch();
