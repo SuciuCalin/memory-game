@@ -27,62 +27,67 @@
 
 <body>
 
-    <!-- Victory Modal for game completion -->
-    <div class="modal fade" id="victory" role="dialog" aria-labelledby="victoryLabel" >
-        <div class="modal-dialog" role="document">
-            <div class="modal-content text-center">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h1 class="modal-title" id="victoryLabel">Winner!</h1>
-                </div>
-                <div class="modal-body">
-                    <h4>It was hard, but you succeeded!</h4>
-                    <p>Moves: <span class="moves"></span></p>
-                    <p>Time: <span class="time"></span> seconds</p>
-                    <ul class="stars rating"></ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="play-again btn btn-block btn-primary center-block" data-dismiss="modal">Play Again(Enter)</button>
-                </div>
-            </div>
+  <!-- Victory Modal for game completion -->
+  <div class="modal fade" id="victory" role="dialog" aria-labelledby="victoryLabel" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h1 class="modal-title" id="victoryLabel">Winner!</h1>
+          </div>
+          <div class="modal-body">
+            <h4>It was hard, but you succeeded!</h4>
+            <p>Moves: <span class="moves"></span></p>
+            <p>Time: <span class="time"></span> seconds</p>
+            <ul class="stars rating"></ul>
+            <p>Pts: <span class="game-score"></span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="play-again btn btn-block btn-primary center-block" data-dismiss="modal">Play Again(Enter)</button>
+          </div>
         </div>
     </div>
+  </div>
 
-    <!-- Overlay to prevent clicking on more than two cards -->
-    <div id="overlay"></div>
+  <!-- Overlay to prevent clicking on more than two cards -->
+  <div id="overlay"></div>
 
-    <!-- Container for the main content -->
-    <div class="container">
+  <!-- Container for the main content -->
+  <div class="container">
 
-        <!-- Header -->
-        <header>
-            <h1 class="text-center">Matching Game</h1>
-        </header>
+    <!-- Header -->
+    <header>
+      <h1 class="text-center">Matching Game</h1>
+    </header>
 
-        <!-- Score panel section -->
-        <section class="score-panel">
-        	<ul class="stars">
-        		<li><i></i></li>
-        		<li><i></i></li>
-        		<li><i></i></li>
-        	</ul>
+    <!-- Score panel section -->
+    <section class="score-panel">
+    	<ul class="stars">
+    		<li><i></i></li>
+    		<li><i></i></li>
+    		<li><i></i></li>
+    	</ul>
+      <span class="game-score">0</span> Pts
 
-        	<span class="moves">0</span> Moves
-            <span class="time">0</span> Seconds
-            <div class="restart">
-        		<i class="fa fa-repeat"></i>
-        	</div>
-        </section>
+      <div class="restart">
+    		<i class="fa fa-repeat"></i>
+    	</div>
 
-        <!-- Deck section -->
-        <ul class="deck"></ul>
+      <br>
+      <span class="moves">0</span> Moves
+      <span class="time">0</span> Seconds
 
-        <!-- Footer  -->
-        <footer class="text-center">
-            <p>© 2017 <a href="https://suciucalin.github.io/" target="_blank" title="Eugen-Calin Suciu">Suciu Eugen-Calin</a></p>
-      </footer>
+    </section>
 
-    </div> <!-- Main container-->
+    <!-- Deck section -->
+    <ul class="deck"></ul>
+
+    <!-- Footer  -->
+    <footer class="text-center">
+      <p>© 2017 <a href="https://suciucalin.github.io/" target="_blank" title="Eugen-Calin Suciu">Suciu Eugen-Calin</a></p>
+    </footer>
+
+  </div> <!-- Main container-->
 
 </body>
 </html>
