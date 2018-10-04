@@ -13,6 +13,7 @@ const cards = [
   'fa fa-heart','fa fa-heart'
 ];
 
+let scorePts = 0;
 let moves = 0; // Keeps track of the player moves
 let stars = 3; // Keeps track of the player stars
 let timer;     // Keeps track of the player time
@@ -123,10 +124,10 @@ function checkMatch() {
       }
 
     } else {
-          // If the cards do not match, hide the card's symbol
-          for (let i = openCards.length - 1; i >= 0 ; i--) {
-            mismatch(openCards[i]);
-          }
+        // If the cards do not match, hide the card's symbol
+        for (let i = openCards.length - 1; i >= 0 ; i--) {
+          mismatch(openCards[i]);
+        }
       }
 
     }, 500);
@@ -245,6 +246,14 @@ function stopTimer() {
 }
 
 /*
+ *  Sets the scorePts based on the starsEarned and displays it
+ */
+function updateScorePts() {
+  scorePts += stars;
+  $('.game-score').text(scorePts);
+}
+
+/*
  *  Checks if all cards have matched (game completed)
  */
 function checkWin() {
@@ -255,6 +264,7 @@ function checkWin() {
   if (matchedCards.length == cards.length) {
     stopTimer();
     victoryMessage();
+    updateScorePts();
   }
 }
 
