@@ -96,6 +96,11 @@ h1 {
 /* =====================
     Score Panel
  =======================*/
+ #player {
+   cursor: pointer;
+   padding-right: 10px;
+ }
+
 .score-panel {
   text-align: left;
   width: 345px;
