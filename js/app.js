@@ -24,15 +24,16 @@ if (typeof(Storage) !== "undefined") {
 
   // Check if the scorePts are already stored in localStorage
   if (localStorage.scorePts) {
-    console.log('got pts in local storage', Number(localStorage.scorePts));
     // Get the scorePts from localStorage, and display it on the page
     scorePts = Number(localStorage.scorePts);
     $('.game-score').text(scorePts);
+    console.log('got pts in local storage', Number(localStorage.scorePts));
 
     // Check if the player name is already stored in localStorage
   } else if (localStorage.playerName) {
-      // Get the playerName from localStorage
+      // Get the playerName from localStorage, and display it on the page
       player = localStorage.playerName;
+      $('#player').text(player);
       console.log('welcome back', player);
     }
 }
