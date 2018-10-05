@@ -18,6 +18,17 @@ let moves = 0; // Keeps track of the player moves
 let stars = 3; // Keeps track of the player stars
 let timer;     // Keeps track of the player time
 
+// Checking browser support for localStorage
+if (typeof(Storage) !== "undefined") {
+  // Check if the scorePts are already stored in localStorage
+  if (localStorage.scorePts) {
+    console.log('got pts in local storage', Number(localStorage.scorePts));
+    // Get the scorePts from localStorage, and display it on the page
+    scorePts = Number(localStorage.scorePts);
+    $('.game-score').text(scorePts);
+  }
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
@@ -251,6 +262,8 @@ function stopTimer() {
 function updateScorePts() {
   scorePts += stars;
   $('.game-score').text(scorePts);
+
+  localStorage.scorePts = scorePts; // Stores the scorePts in localStorage
 }
 
 /*
