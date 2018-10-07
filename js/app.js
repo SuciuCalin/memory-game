@@ -13,11 +13,11 @@ const cards = [
   'fa fa-heart','fa fa-heart'
 ];
 
-let player;
-let scorePts = 0;
-let moves = 0; // Keeps track of the player moves
-let stars = 3; // Keeps track of the player stars
-let timer;     // Keeps track of the player time
+let player;       // Stores the player name
+let scorePts = 0; // Keeps track of the game score
+let moves = 0;    // Keeps track of the player moves
+let stars = 3;    // Keeps track of the player stars
+let timer;        // Keeps track of the player time
 
 // Checking browser support for localStorage
 if (typeof(Storage) !== "undefined") {
@@ -65,6 +65,7 @@ function newGame() {
     user.text(player);
   }
 
+  // Clicking the player name, calls the changePlayerName() function
   user.click(changePlayerName);
 
   // If a deck has already been created, clear the deck before making a new one
@@ -117,9 +118,15 @@ function setupGame() {
   starCounter();
 }
 
+/*
+ *  Lets the user change the player name
+ */
 function changePlayerName() {
+  // Prompts the user to enter a name and stores it in the "player" variable
   player = prompt("Enter your name", "Player");
+  // Displays the player name on the page
   $('#player').text(player);
+  // Stores the player name in localStorage
   localStorage.playerName = player;
 }
 
